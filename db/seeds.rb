@@ -8,7 +8,7 @@
 recipe_types = %w(Breakfast BBQ Dessert Salad)
 recipe_types.each { |t| RecipeType.where(:name => t).first_or_create }
 
-recipe_preferences = %w(Vegetarian Vegan #{Gluten Free} #{Dairy Free})
+recipe_preferences = %w(Vegetarian Vegan Gluten\ Free Dairy\ Free)
 recipe_preferences.each { |p| RecipePreference.where(:name => p).first_or_create }
 
 cuisines = %w(Asian Hispanic Mediterranean TexMex)
