@@ -49,7 +49,7 @@
   </div>
   <div class="field">
     <%= f.label :difficulty %><br>
-    <%= f.text_field :difficulty %>
+    <%= f.select :difficulty, Recipe::DIFFICULTY, {}, :class => "form-control" %>
   </div>
   <div class="field">
     <%= f.label :ingredients %><br>
