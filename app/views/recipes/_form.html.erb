@@ -16,24 +16,36 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :recipe_type_id %><br>
+    <%= f.number_field :recipe_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :recipe_preference_id %><br>
+    <%= f.number_field :recipe_preference_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cuisine_id %><br>
+    <%= f.number_field :cuisine_id %>
+  </div>
+  <div class="field">
     <%= f.label :high_protein %><br>
-    <%= f.text_field :high_protein %>
+    <%= f.check_box :high_protein %>
   </div>
   <div class="field">
     <%= f.label :low_fat %><br>
-    <%= f.text_field :low_fat %>
+    <%= f.check_box :low_fat %>
   </div>
   <div class="field">
     <%= f.label :protein %><br>
-    <%= f.text_field :protein %>
+    <%= f.number_field :protein %>
   </div>
   <div class="field">
     <%= f.label :carbohydrates %><br>
-    <%= f.text_field :carbohydrates %>
+    <%= f.number_field :carbohydrates %>
   </div>
   <div class="field">
     <%= f.label :fat %><br>
-    <%= f.text_field :fat %>
+    <%= f.number_field :fat %>
   </div>
   <div class="field">
     <%= f.label :difficulty %><br>
