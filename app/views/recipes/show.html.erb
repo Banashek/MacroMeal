@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @recipe.name %>
+</p>
+
+<p>
+  <strong>High protein:</strong>
+  <%= @recipe.high_protein %>
+</p>
+
+<p>
+  <strong>Low fat:</strong>
+  <%= @recipe.low_fat %>
+</p>
+
+<p>
+  <strong>Protein:</strong>
+  <%= @recipe.protein %>
+</p>
+
+<p>
+  <strong>Carbohydrates:</strong>
+  <%= @recipe.carbohydrates %>
+</p>
+
+<p>
+  <strong>Fat:</strong>
+  <%= @recipe.fat %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @recipe.difficulty %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= @recipe.ingredients %>
+</p>
+
+<p>
+  <strong>Directions:</strong>
+  <%= @recipe.directions %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>
