@@ -1,23 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  high_protein: 
-  low_fat: 
-  protein: 
-  carbohydrates: 
-  fat: 
-  difficulty: MyString
-  ingredients: MyText
-  directions: MyText
-
-two:
-  name: MyString
-  high_protein: 
-  low_fat: 
-  protein: 
-  carbohydrates: 
-  fat: 
-  difficulty: MyString
-  ingredients: MyText
-  directions: MyText
+broteinshake:
+  name: Brotein Shake
+  high_protein: true
+  low_fat: true
+  protein: 60
+  carbohydrates: 10
+  fat: 6
+  difficulty: Easy
+  ingredients: Protein Powder Milk Peanutbutter Banana
+  directions: Throw it all in a blender and mix it. Drink while fist pumping.
