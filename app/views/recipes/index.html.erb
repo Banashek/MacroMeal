@@ -23,9 +23,9 @@
     <% @recipes.each do |recipe| %>
       <tr>
         <td><%= recipe.name %></td>
-        <td><%= recipe.recipe_type_id %></td>
-        <td><%= recipe.recipe_preference_id %></td>
-        <td><%= recipe.cuisine_id %></td>
+        <td><%= recipe.recipe_type.name %></td>
+        <td><%= recipe.recipe_preference.name %></td>
+        <td><%= recipe.cuisine.name %></td>
         <td><%= recipe.high_protein %></td>
         <td><%= recipe.low_fat %></td>
         <td><%= recipe.protein %></td>
