@@ -18,7 +18,7 @@ class RecipesControllerTest < ActionController::TestCase
 
   test "should create recipe" do
     assert_difference('Recipe.count') do
-      post :create, recipe: { carbohydrates: @recipe.carbohydrates, cuisine_id: @recipe.cuisine_id, difficulty: @recipe.difficulty, directions: @recipe.directions, fat: @recipe.fat, high_protein: @recipe.high_protein, ingredients: @recipe.ingredients, low_fat: @recipe.low_fat, name: @recipe.name, protein: @recipe.protein, recipe_preference_id: @recipe.recipe_preference_id, recipe_type_id: @recipe.recipe_type_id }
+      post :create, recipe: { carbohydrates: @recipe.carbohydrates, difficulty: @recipe.difficulty, directions: @recipe.directions, fat: @recipe.fat, high_protein: @recipe.high_protein, ingredients: @recipe.ingredients, low_fat: @recipe.low_fat, name: @recipe.name, protein: @recipe.protein }
     end
 
     assert_redirected_to recipe_path(assigns(:recipe))
@@ -35,7 +35,7 @@ class RecipesControllerTest < ActionController::TestCase
   end
 
   test "should update recipe" do
-    patch :update, id: @recipe, recipe: { carbohydrates: @recipe.carbohydrates, cuisine_id: @recipe.cuisine_id, difficulty: @recipe.difficulty, directions: @recipe.directions, fat: @recipe.fat, high_protein: @recipe.high_protein, ingredients: @recipe.ingredients, low_fat: @recipe.low_fat, name: @recipe.name, protein: @recipe.protein, recipe_preference_id: @recipe.recipe_preference_id, recipe_type_id: @recipe.recipe_type_id }
+    patch :update, id: @recipe, recipe: { carbohydrates: @recipe.carbohydrates, difficulty: @recipe.difficulty, directions: @recipe.directions, fat: @recipe.fat, high_protein: @recipe.high_protein, ingredients: @recipe.ingredients, low_fat: @recipe.low_fat, name: @recipe.name, protein: @recipe.protein }
     assert_redirected_to recipe_path(assigns(:recipe))
   end
 

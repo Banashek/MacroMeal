@@ -17,15 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :recipe_type %><br>
-    <%= f.select(:recipe_type_id, options_from_collection_for_select(RecipeType.all, :id, :name), {:prompt => "Please Choose"}, class: "form-control") %>
+    <%= f.select :difficulty, Recipe::TYPE, {}, :class => "form-control" %>
   </div>
   <div class="field">
     <%= f.label :recipe_preference %><br>
-    <%= f.select(:recipe_preference_id, options_from_collection_for_select(RecipePreference.all, :id, :name), {:prompt => "Please Choose"}, class: "form-control") %>
+    <%= f.select :difficulty, Recipe::PREFERENCE, {}, :class => "form-control" %>
   </div>
   <div class="field">
     <%= f.label :cuisine %><br>
-    <%= f.select(:cuisine_id, options_from_collection_for_select(Cuisine.all, :id, :name), {:prompt => "Please Choose"}, class: "form-control") %>
+    <%= f.select :difficulty, Recipe::CUISINE, {}, :class => "form-control" %>
   </div>
   <div class="field">
     <%= f.label :high_protein %><br>

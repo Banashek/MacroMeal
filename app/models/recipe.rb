@@ -1,6 +1,6 @@
 class Recipe < ActiveRecord::Base
   DIFFICULTY=%w(Easy Medium Hard)
-  belongs_to :recipe_type
-  belongs_to :recipe_preference
-  belongs_to :cuisine
+  TYPE=%w(Breakfast BBQ Protien\ Powder)
+  PREFERENCE=%w(Gluten\ Free Dairy\ Free Low\ Fat High\ Protein)
+  CUISINE=%w(Asian Mediterranean Italian)
 end
