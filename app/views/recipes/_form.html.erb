@@ -16,18 +16,6 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :recipe_type %><br>
-    <%= f.select :difficulty, Recipe::TYPE, {}, :class => "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :recipe_preference %><br>
-    <%= f.select :difficulty, Recipe::PREFERENCE, {}, :class => "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :cuisine %><br>
-    <%= f.select :difficulty, Recipe::CUISINE, {}, :class => "form-control" %>
-  </div>
-  <div class="field">
     <%= f.label :high_protein %><br>
     <%= f.check_box :high_protein %>
   </div>
