@@ -2,10 +2,10 @@
 <div class="col-md-8">
   <h2>Index of Recipes</h1>
   <div class="recipe-search">
-    <%= form_tag("/search", method: "get") do %>
-      <%= label_tag(:q, "Search Recipes") %>
-      <%= text_field_tag(:q, "Turkey Lasagna") %>
-      <%= submit_tag("Search") %>
+    <%= form_tag recipes_path, method: "get" do %>
+      <%= label_tag :search, "Search Recipes" %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", name: nil %>
     <% end %>
   </div>
   <% @recipes.each do |recipe| %>

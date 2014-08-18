@@ -5,10 +5,7 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
-  end
-
-  def search
+    @recipes = Recipe.search(params[:search])
   end
 
   # GET /recipes/1

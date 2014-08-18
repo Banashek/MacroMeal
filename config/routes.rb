@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get 'recipes/search' => 'recipes#search'
-
   resources :recipes
 
   root 'recipes#index'
