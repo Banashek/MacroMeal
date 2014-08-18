@@ -15,4 +15,8 @@ class Recipe < ActiveRecord::Base
     end
   end
 
+  def self.myRecipes(user_id)
+    where('user_id = ?', user_id)
+  end
+
 end

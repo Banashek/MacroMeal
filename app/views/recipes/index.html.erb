@@ -33,9 +33,11 @@
       </p>
       <p>
         <%= link_to 'Show', recipe, class: "btn btn-primary btn-small" %>
-        <% if user_signed_in? %>
-          <%= link_to 'Edit', edit_recipe_path(recipe), class: " btn btn-success btn-small" %>
-          <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-small" %>
+        <% if @myRecipes %>
+          <% if @myRecipes.include? recipe %>
+            <%= link_to 'Edit', edit_recipe_path(recipe), class: " btn btn-success btn-small" %>
+            <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-small" %>
+          <% end %>
         <% end %>
       </p>
     </div>

@@ -6,11 +6,13 @@ class RecipesController < ApplicationController
   # GET /recipes.json
   def index
     @recipes = Recipe.search(params[:search])
+    @myRecipes = Recipe.myRecipes(current_user.id) if current_user
   end
 
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    @myRecipes = Recipe.myRecipes(current_user.id) if current_user
   end
 
   # GET /recipes/new
@@ -20,6 +22,9 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1/edit
   def edit
+    # FIX THIS
+    @r = Recipe.where('id = ?', params[:id]).pluck(:user_id)[0]
+    redirect_to recipes_path unless @r == current_user.id
   end
 
   # POST /recipes

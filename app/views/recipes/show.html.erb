@@ -44,5 +44,9 @@
   <%= @recipe.directions %>
 </p>
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<% if @myRecipes %>
+  <% if @myRecipes.include? @recipe %>
+    <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+  <% end %>
+<% end %>
 <%= link_to 'Back', recipes_path %>
