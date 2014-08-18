@@ -1,6 +1,13 @@
 <div class="col-md-2"></div>
 <div class="col-md-8">
   <h2>Index of Recipes</h1>
+  <div class="recipe-search">
+    <%= form_tag("/search", method: "get") do %>
+      <%= label_tag(:q, "Search Recipes") %>
+      <%= text_field_tag(:q, "Turkey Lasagna") %>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </div>
   <% @recipes.each do |recipe| %>
     <div class="recipe-box">
       <h1>
