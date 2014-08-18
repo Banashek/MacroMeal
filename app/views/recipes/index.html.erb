@@ -2,12 +2,22 @@
 <div class="col-md-8">
   <h2>Index of Recipes</h1>
   <% @recipes.each do |recipe| %>
-    <div class="jumbotron">
-      <h1><%= recipe.name %></h1>
+    <div class="recipe-box">
+      <h1>
+        <%= recipe.name.capitalize %>
+      </h1>
+      <div class="recipe-features">
+        <% if recipe.high_protein %>
+          <p>High protein</p>
+        <% end %>
+        <% if recipe.low_fat %>
+          <p>Low fat</p>
+        <% end %>
+      </div>
       <p>
-        <%= recipe.protein %>g
-        <%= recipe.carbohydrates %>g
-        <%= recipe.fat %>g
+        Protein: <%= recipe.protein %>g
+        Carbohydrates: <%= recipe.carbohydrates %>g
+        Fat: <%= recipe.fat %>g
       </p>
       <p>
         <%= link_to 'Show', recipe, class: "btn btn-primary btn-small" %>

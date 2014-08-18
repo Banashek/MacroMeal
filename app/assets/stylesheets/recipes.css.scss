@@ -1,3 +1,24 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$recipe-box-color: #BDBDBD;
+$recipe-feature-color: #C6FFBA;
+
+.recipe-box {
+	border-radius: 10px;
+	background-color: $recipe-box-color;
+	padding: 1px 20px 3px 20px;
+	h1 {
+		margin-top: 10px;		  	
+	}
+}
+
+.recipe-features {
+	p {
+		display: inline;
+		background-color: $recipe-feature-color;
+		border-radius: 5px;
+		padding: 3px;
+	}
+	margin-bottom: 5px;
+}
