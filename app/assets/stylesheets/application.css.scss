@@ -1,7 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "recipes";
+@import "errors";
 
 a {
   color: #838383;
+}
+
+.main-container {
+  margin-top: 60px;
 }
