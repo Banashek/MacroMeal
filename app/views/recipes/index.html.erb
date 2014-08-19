@@ -5,7 +5,8 @@
     <%= form_tag recipes_path, method: "get" do %>
       <%= label_tag :search, "Search Recipes" %>
       <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", name: nil %>
+      <%= submit_tag "Search", name: nil, class: "btn btn-success btn-small" %>
+      <%= link_to 'Advanced Search', recipes_path, class: "btn btn-primary btn-small pull-right" %>
     <% end %>
   </div>
   <% @recipes.each do |recipe| %>
