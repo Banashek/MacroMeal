@@ -1,4 +1,4 @@
-<%= form_for(@recipe) do |f| %>
+<%= form_for @recipe, html: {role: "form"}   do |f| %>
   <% if @recipe.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
@@ -11,41 +11,41 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :high_protein %><br>
+  <div class="form-group">
     <%= f.check_box :high_protein %>
+    <%= f.label :high_protein, class: "checkbox-inline" %>
   </div>
-  <div class="field">
-    <%= f.label :low_fat %><br>
+  <div class="form-group">
     <%= f.check_box :low_fat %>
+    <%= f.label :low_fat, class: "checkbox-inline" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :protein %><br>
-    <%= f.number_field :protein %>
+    <%= f.number_field :protein, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :carbohydrates %><br>
-    <%= f.number_field :carbohydrates %>
+    <%= f.number_field :carbohydrates, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :fat %><br>
-    <%= f.number_field :fat %>
+    <%= f.number_field :fat, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :difficulty %><br>
     <%= f.select :difficulty, Recipe::DIFFICULTY, {}, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :ingredients %><br>
-    <%= f.text_area :ingredients %>
+    <%= f.text_area :ingredients, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :directions %><br>
-    <%= f.text_area :directions %>
+    <%= f.text_area :directions, class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>
