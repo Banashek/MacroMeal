@@ -1,7 +1,34 @@
 <h1>Advanced Search</h1>
 
 <%= form_tag recipes_path, method: "get" do %>
-  <%= label_tag :search, "Search Recipes" %>
+  <%= label_tag :recipe_name, "Recipe name" %>
   <%= text_field_tag :recipe_name, params[:recipe_name] %>
+  <br/>
+  <%= label_tag :min_f, "Minimum Fat" %>  
+  <%= text_field_tag :min_f, params[:min_f] %>
+  <br/>
+  <%= label_tag :max_f, "Maximum Fat" %>
+  <%= text_field_tag :max_f, params[:max_f] %>
+  <br/>
+  <%= label_tag :min_c, "Minimum Carbohydrates" %>
+  <%= text_field_tag :min_c, params[:min_c] %>
+  <br/>
+  <%= label_tag :max_c, "Maximum Carbohydrates" %>
+  <%= text_field_tag :max_c, params[:max_c] %>
+  <br/>
+  <%= label_tag :min_p, "Minimum Protein" %>
+  <%= text_field_tag :min_p, params[:min_p] %>
+  <br/>
+  <%= label_tag :max_p, "Maximum Protein" %>
+  <%= text_field_tag :max_p, params[:max_p] %>
+  <br/>
+  <%= check_box_tag :high_protein %>
+  <%= label_tag :high_protein, "High Protein" %>
+  <br/>
+  <%= check_box_tag :low_fat %>
+  <%= label_tag :low_fat, "Low Fat" %>
+  <br/>
+
+
   <%= submit_tag "Search", name: nil, class: "btn btn-success btn-small" %>
 <% end %>

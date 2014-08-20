@@ -6,9 +6,15 @@ class RecipesController < ApplicationController
   # GET /recipes.json
   def index
     if params.has_key? :recipe_name
-      @recipes = Recipe.advancedSearch(params[:recipe_name])
+      @recipes = Recipe.advancedSearch(params[:recipe_name],
+                                       params[:min_p],
+                                       params[:max_p],
+                                       params[:min_c],
+                                       params[:max_c],
+                                       params[:min_f],
+                                       params[:max_f])
     else
-      @recipes = Recipe.search(params[:search])
+      @recipes = Recipe.search(params[:recipe_name])
     end
     @myRecipes = Recipe.myRecipes(current_user.id) if current_user
   end
