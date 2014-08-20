@@ -1,6 +1,7 @@
 class Recipe < ActiveRecord::Base
   belongs_to :user
   validates :user, presence: true
+  validates :protein, :carbohydrates, :fat, :ingredients, :directions, presence: true
   DIFFICULTY=%w(Easy Medium Hard)
 
   def name=(value)
