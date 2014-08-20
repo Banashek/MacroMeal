@@ -7,8 +7,8 @@
 
     <h2 class="form-signup-heading">Sign up</h2>
 
-    <div><%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, required: true, class: "form-control" %></div>
+    <div><%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true, required: true, class: "form-control" %></div>
 
     <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
       <%= f.password_field :password, autocomplete: "off", required: true, class: "form-control" %></div>

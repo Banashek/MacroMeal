@@ -1,7 +1,4 @@
 @inbox
-- Change devise to use usernames instead of emails
-- Push to github
-- Push to heroku
 
 @next
 - Add ratings system
@@ -10,6 +7,7 @@
 @later, out of current scope
 - Add my recipes (for easier editing of a user's own recipes)
 - Add my saved recipes (for easier repeated use of a recipe)
+- Add watch user feature (to see new recipes by a certain user)
 - Add images
 - Add infinite scrolling
 
@@ -17,3 +15,6 @@
 - Add about and contact pages
 - Add home page
 - Add advanced search feature
+- Change devise to use usernames instead of emails
+- Push to github
+- Push to heroku
