@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  get '/about' =>  'application#about'
+  get '/contact' => 'application#contact'
   resources :recipes
 
   root 'recipes#index'
