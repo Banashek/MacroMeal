@@ -1,16 +1,19 @@
 @inbox
-- Add advanced search feature
+- Change devise to use usernames instead of emails
+- Push to github
+- Push to heroku
 
 @next
 - Add ratings system
 - Setup email for support@macromeal.com
 
 @later, out of current scope
-- Add my recipes
-- Add my saved recipes
+- Add my recipes (for easier editing of a user's own recipes)
+- Add my saved recipes (for easier repeated use of a recipe)
 - Add images
 - Add infinite scrolling
 
 @COMPLETED
 - Add about and contact pages
 - Add home page
+- Add advanced search feature
