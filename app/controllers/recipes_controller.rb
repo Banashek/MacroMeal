@@ -14,7 +14,7 @@ class RecipesController < ApplicationController
                                        params[:min_f],
                                        params[:max_f])
     else
-      @recipes = Recipe.search(params[:recipe_name])
+      @recipes = Recipe.search(params[:search])
     end
     @myRecipes = Recipe.myRecipes(current_user.id) if current_user
   end
