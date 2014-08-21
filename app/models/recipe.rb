@@ -16,7 +16,7 @@ class Recipe < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where('name LIKE ?', "%#{search.downcase}%")
+      where('name LIKE ? OR ingredients LIKE ?', "%#{search.downcase}%", "%#{search.downcase}%")
     else
       all
     end
