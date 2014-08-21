@@ -18,3 +18,4 @@
 - Change devise to use usernames instead of emails
 - Push to github
 - Push to heroku
+- Protect recipes from crafted deletion requests by other users (e.g. DELETE /recipes/7)

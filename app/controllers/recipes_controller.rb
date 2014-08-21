@@ -35,9 +35,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1/edit
   def edit
-    # FIX THIS
-    @r = Recipe.where('id = ?', params[:id]).pluck(:user_id)[0]
-    redirect_to recipes_path unless @r == current_user.id
+    recipeOwnerCheck
   end
 
   # POST /recipes
@@ -60,6 +58,7 @@ class RecipesController < ApplicationController
   # PATCH/PUT /recipes/1
   # PATCH/PUT /recipes/1.json
   def update
+    recipeOwnerCheck
     respond_to do |format|
       if @recipe.update(recipe_params)
         format.html { redirect_to @recipe, notice: 'Recipe was successfully updated.' }
@@ -74,6 +73,7 @@ class RecipesController < ApplicationController
   # DELETE /recipes/1
   # DELETE /recipes/1.json
   def destroy
+    recipeOwnerCheck
     @recipe.destroy
     respond_to do |format|
       format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
@@ -85,6 +85,11 @@ class RecipesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
       @recipe = Recipe.find(params[:id])
+    end
+
+    def recipeOwnerCheck
+      @r = Recipe.where('id = ?', params[:id]).pluck(:user_id)[0]
+      redirect_to recipes_path unless @r == current_user.id
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
